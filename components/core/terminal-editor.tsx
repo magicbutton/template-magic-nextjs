@@ -13,7 +13,7 @@ type Command = {
 };
 import * as monacoEditor from "monaco-editor"; // Importing the types
 import { set } from "date-fns";
-import { ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
+
 export default function TerminalEditor(props: {
   code: string;
   language: string;

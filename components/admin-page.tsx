@@ -17,7 +17,7 @@ interface StatusMessage {
 }
 
 // Reducer for status messages
-type StatusAction = 
+type StatusAction =
   | { type: 'ADD_MESSAGE'; payload: StatusMessage }
   | { type: 'CLEAR_MESSAGES' }
 
@@ -91,11 +91,10 @@ export function AdminPageComponent() {
               {statusMessages.map((message) => (
                 <div
                   key={message.id}
-                  className={`p-2 rounded ${
-                    message.type === 'success' ? 'bg-green-100 text-green-800' :
+                  className={`p-2 rounded ${message.type === 'success' ? 'bg-green-100 text-green-800' :
                     message.type === 'error' ? 'bg-red-100 text-red-800' :
-                    'bg-blue-100 text-blue-800'
-                  }`}
+                      'bg-blue-100 text-blue-800'
+                    }`}
                 >
                   {message.text}
                 </div>

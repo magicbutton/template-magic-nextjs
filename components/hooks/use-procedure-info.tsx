@@ -1,6 +1,6 @@
 "use client";
 import { useSQLSelect3 } from "@/app/koksmat/usesqlselect3";
-import { ProcedureInfo } from "@/components/stored-procedure-page";
+import { ProcedureInfo } from "@/components/core/stored-procedure-page";
 import { generateDatabaseCallSourceCode } from "@/lib/generatevalidationfunction";
 import { extractAndParseJson } from "@/lib/tsql-extract";
 import jsonSchemaToZod from "json-schema-to-zod";

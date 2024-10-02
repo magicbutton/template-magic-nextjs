@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CommandSelector, CommandSelectorItem } from "./command-selector";
-import useWorkspaceExec from "./hooks/use-workspace-exec";
+
 import ItemsViewer, { Visualisation } from "./items-viewer";
 import { useSQLSelect3 } from "@/app/koksmat/usesqlselect3";
 import { DatabaseProps } from "./dashboard-databases";

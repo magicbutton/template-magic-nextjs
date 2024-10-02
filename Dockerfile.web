@@ -13,8 +13,8 @@ COPY --from=node /usr/local/bin /usr/local/bin
 
 
 
-WORKDIR /koksmat/.koksmat/web
-COPY ./.koksmat/web .
+WORKDIR /web
+COPY . .
 RUN npm install -g pnpm
 RUN pnpm install
 RUN pnpm build

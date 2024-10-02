@@ -16,8 +16,8 @@ import { DropdownMenuIcon } from "@radix-ui/react-icons";
 import {
   useBreadcrumbContext,
   BreadcrumbItemProps,
-} from "./contexts/breadcrumb-context";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+} from "@/components/contexts/breadcrumb-context";
+
 import {
   HoverCard,
   HoverCardContent,

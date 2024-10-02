@@ -59,9 +59,8 @@ const DraggableTab = ({
       ref={setNodeRef}
       onClick={onClick}
       style={style}
-      className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${
-        isActive ? "bg-background text-foreground shadow-sm" : ""
-      }`}
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-all ${isActive ? "bg-background text-foreground shadow-sm" : ""
+        }`}
       {...attributes}
     >
       <GripVertical className="mr-2 h-4 w-4 cursor-move" {...listeners} />

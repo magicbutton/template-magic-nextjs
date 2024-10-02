@@ -12,10 +12,10 @@ import { APPNAME } from "@/app/global";
 import { Fragment, useContext } from "react";
 import { MagicboxContext } from "@/app/koksmat/magicbox-context";
 import Tracer from "@/app/koksmat/components/tracer";
-import { ChefHatIcon } from "./icons/ChefHatIcon";
+import { ChefHatIcon } from "@/components/icons/ChefHatIcon";
 import { AppWindowMac, Globe } from "lucide-react";
-import useWorkspaceConnectionStatus from "./hooks/use-workspace-connectionstatus";
-import { KoksmatChef } from "./icons/KoksmatChef";
+import useWorkspaceConnectionStatus from "@/components//hooks/use-workspace-connectionstatus";
+import { KoksmatChef } from "@/components//icons/KoksmatChef";
 import GlobalShopButton from "./global-shop-button";
 
 export namespace href {

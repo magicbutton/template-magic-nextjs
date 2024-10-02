@@ -1,9 +1,10 @@
-import { DashboardHomepage } from "@/components/dashboard-homepage";
-import LandingPage from "@/components/koksmat-studio-landing";
+import { AdminDashboardComponent } from "@/components/admin-dashboard";
+
 
 export default function Page() {
   return (
     <div className="container">
+      <AdminDashboardComponent />
 
     </div>
   );

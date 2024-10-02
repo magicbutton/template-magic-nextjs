@@ -18,12 +18,9 @@ import * as prettier from "prettier/standalone";
 import { jsonSchemaToZod } from "json-schema-to-zod";
 import InterfaceBuilder from "./interface-builder";
 import { InterfaceViewer } from "./interface-viewer";
-import { shareCreateBite } from "./actions/share-create-bite";
+
 import { createIngredienceTemmplate } from "@/lib/kitchen";
 import { nanoid } from "nanoid";
-import { FilePenIcon } from "./icons/FilePenIcon";
-import { DownloadIcon } from "./icons/DownloadIcon";
-import { DatabaseIcon } from "./icons/DatabaseIcon";
 import { buildInterface } from "@/lib/buildInterface";
 import { Code2Icon, Play, PlayIcon, SquareFunction } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -54,6 +51,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { StoredProcedureToolbar } from "./stored-procedure-toolbar";
+import { shareCreateBite } from "../actions/share-create-bite";
 
 export interface Root {
   Result: Result[];

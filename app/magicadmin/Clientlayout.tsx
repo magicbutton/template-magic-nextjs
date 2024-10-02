@@ -6,9 +6,9 @@ keep: false
 # Set the Front Matter property ´keep´ to ´true´ 
 
 */
-import { AppProvider } from "@/components/appcontextprovider";
-import { href } from "@/components/rootlayout";
-import GlobalBreadcrumb from "@/components/global-breadcrumb";
+import { AppProvider } from "@/components/core/appcontextprovider";
+import { href } from "@/components/core/rootlayout";
+import GlobalBreadcrumb from "@/components/core/global-breadcrumb";
 import Authenticate, { UserProfileAPI } from "../koksmat/authenticate";
 import { useContext, useState } from "react";
 import { BreadcrumbProvider } from "@/components/contexts/breadcrumb-context";
@@ -24,19 +24,19 @@ import {
   Moon,
   Shield,
 } from "lucide-react";
-import TabNavigatorWithReorder from "@/components/tab-navigator-with-reorder";
-import GlobalPasteHandling from "@/components/global-paste-handling";
-import { GlobalDropHandling } from "@/components/global-drop-handling";
-import ResizableLayout from "@/components/layout-left-aside";
-import LeftNavigation, { NavItem } from "@/components/left-navigation";
+import TabNavigatorWithReorder from "@/components/core/tab-navigator-with-reorder";
+import GlobalPasteHandling from "@/components/core/global-paste-handling";
+import { GlobalDropHandling } from "@/components/core/global-drop-handling";
+import ResizableLayout from "@/components/core/layout-left-aside";
+import LeftNavigation, { NavItem } from "@/components/core/left-navigation";
 import { Settings, HelpCircle, LogOut } from "lucide-react";
 import { KoksmatChef } from "@/components/icons/KoksmatChef";
-import GlobalShopButton from "@/components/global-shop-button";
+import GlobalShopButton from "@/components/core/global-shop-button";
 import { APPNAME } from "../global";
 import Link from "next/link";
 import { useExampleHook } from "@/components/providers/lookup-provider";
-import ErrorBoundary from "@/components/error-boundary";
-import ThemeToggle from "@/components/theme-toggle";
+import ErrorBoundary from "@/components/core/error-boundary";
+import ThemeToggle from "@/components/core/theme-toggle";
 import { MagicboxContext } from "../koksmat/magicbox-context";
 import Tracer from "../koksmat/components/tracer";
 
@@ -125,6 +125,20 @@ export default function ClientLayout(props: { children: any }) {
       info: "Sign out of your account",
     },
   ];
+  // temporary layout
+  return (
+    <AppProvider>
+      <ErrorBoundary>
+        <Authenticate apiScope={UserProfileAPI}>
+          <BreadcrumbProvider lookupHandlers={[useExampleHook()]}>
+
+            {children}
+
+          </BreadcrumbProvider>
+        </Authenticate>
+      </ErrorBoundary>
+    </AppProvider>
+  );
   return (
     <AppProvider>
       <ErrorBoundary>

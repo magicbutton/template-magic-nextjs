@@ -79,7 +79,7 @@ type ActionType = {
 
 const showPowerApp: ActionType = {
   name: "Show PowerApp",
-  method: async () => {},
+  method: async () => { },
   component: <MagicAppPhase1 />,
 };
 //  //+ Office.context?.document?.url + "&platform="+Office.context.platform + "&host="+Office.context.host
@@ -123,7 +123,7 @@ const wordActions: ActionType[] = [
   },
   {
     name: "Office Context",
-    method: async () => {},
+    method: async () => { },
     component: <OfficeContext />,
   },
   {
@@ -141,7 +141,7 @@ const wordActions: ActionType[] = [
 const outlookActions: ActionType[] = [
   {
     name: "Meeting",
-    method: async () => {},
+    method: async () => { },
     component: <CavaPanel title="Cava" isOfficeInitialized={true} />,
   },
   {
@@ -155,7 +155,7 @@ const outlookActions: ActionType[] = [
   },
   {
     name: "Office Context",
-    method: async () => {},
+    method: async () => { },
     component: <OfficeContext />,
   },
   {
@@ -175,19 +175,19 @@ const outlookActions: ActionType[] = [
 const powerpointActions: ActionType[] = [
   {
     name: "Insert Slide",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Insert Image",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Insert Product Details",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Office Context",
-    method: async () => {},
+    method: async () => { },
     component: <OfficeContext />,
   },
   {
@@ -204,19 +204,19 @@ const powerpointActions: ActionType[] = [
 const excelActions: ActionType[] = [
   {
     name: "Insert Table",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Insert Chart",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Insert Formula",
-    method: async () => {},
+    method: async () => { },
   },
   {
     name: "Office Context",
-    method: async () => {},
+    method: async () => { },
     component: <OfficeContext />,
   },
   {
