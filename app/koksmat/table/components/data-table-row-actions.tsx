@@ -23,7 +23,7 @@ import { schema } from "../data/schema"
 import Link from "next/link"
 
 interface DataTableRowActionsProps<TData> {
-  link:string,
+  link: string,
   row: Row<TData>
 }
 
@@ -46,13 +46,13 @@ export function DataTableRowActions<TData>({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
         <DropdownMenuItem>View</DropdownMenuItem>
-         
+
         <DropdownMenuSeparator />
 
-     
+
         <DropdownMenuItem >
           <Link target="_blank" href={`${link}`}>
-          View Details
+            View Details
           </Link>
           <DropdownMenuShortcut>⌘v</DropdownMenuShortcut>
         </DropdownMenuItem>

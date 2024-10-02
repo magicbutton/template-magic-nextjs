@@ -88,9 +88,9 @@ export function DataTable<TData, TValue>({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   );
                 })}
@@ -99,9 +99,9 @@ export function DataTable<TData, TValue>({
           </TableHeader>
           <TableBody>
             {table &&
-            table.getRowModel &&
-            table.getRowModel() &&
-            table.getRowModel().rows?.length ? (
+              table.getRowModel &&
+              table.getRowModel() &&
+              table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   key={row.id}

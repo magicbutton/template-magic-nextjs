@@ -10,14 +10,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { MagicboxProvider } from "@/app/koksmat/magicbox-providers";
 import { MSALWrapper } from "@/app/koksmat/msal/auth";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
+import { TailwindIndicator } from "@/components/core/tailwind-indicator";
+import { ThemeProvider } from "@/components/core/theme-provider";
 import Script from "next/script";
 import { ServiceInspector } from "@/app/koksmat/components/service-inspector";
 
 import { Toaster } from "@/components/ui/toaster";
 import { CLARITY } from "./global";
-import KoksmatClient from "@/components/koksmat-client";
+import KoksmatClient from "@/components/core/koksmat-client";
 export default function RootLayout2({
   children,
 }: Readonly<{

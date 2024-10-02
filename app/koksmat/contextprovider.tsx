@@ -26,19 +26,19 @@ import { loadMap } from "./server/loadmap"
 
 type Props = {
   children?: React.ReactNode
-  isLocalEnv ?: boolean
+  isLocalEnv?: boolean
   app: string
 }
 
-export const KoksmatProvider = ({ children ,isLocalEnv,app}: Props) => {
+export const KoksmatProvider = ({ children, isLocalEnv, app }: Props) => {
 
   const [root, setroot] = useState("")
   const [kitchenroot, setkitchenroot] = useState("")
   const [rootpath, setrootpath] = useState("")
-const [hasLeftbar, sethasLeftbar] = useState(isLocalEnv??false)
+  const [hasLeftbar, sethasLeftbar] = useState(isLocalEnv ?? false)
   const [map, setmap] = useState<Map>()
 
- 
+
 
 
   const magicbox: MagicboxContextType = {
@@ -65,62 +65,62 @@ const [hasLeftbar, sethasLeftbar] = useState(isLocalEnv??false)
     }
   }
 
- useEffect(() => {
-  const load = async () => {
-    if (!app) return
-   
-    const map = await loadMap(app)
-  setrootpath("/"+app+"/")
-    setmap(map)
-}
-load()
- 
-   
- }, [app])
- 
+  useEffect(() => {
+    const load = async () => {
+      if (!app) return
+
+      const map = await loadMap(app)
+      setrootpath("/" + app + "/")
+      setmap(map)
+    }
+    load()
+
+
+  }, [app])
+
 
   return (
     <KoksmatContext.Provider value={magicbox}>
 
-        <div className="flex">
+      <div className="flex">
 
-          <div>
-        
+        <div>
+
           {hasLeftbar &&
-          <div className="sticky top-[64px] h-screen w-[64px] overflow-hidden bg-slate-200">
-            {/* Left tool */}
-            
-          </div>}
-          </div>
-          <div className="grow">
-            <div className=" sticky top-0 z-50 border-b bg-white">
-          
-              {/* Top nav */}
-              <div className="container my-5 flex">
+            <div className="sticky top-[64px] h-screen w-[64px] overflow-hidden bg-slate-200">
+              {/* Left tool */}
+
+            </div>}
+        </div>
+        <div className="grow">
+          <div className=" sticky top-0 z-50 border-b bg-white">
+
+            {/* Top nav */}
+            <div className="container my-5 flex">
               {map && map.metadata.logo && <Link href="/">
-              <img src={map?.metadata.logo} className="mr-4 h-[32px] " alt="logo"/>
+                <img src={map?.metadata.logo} className="mr-4 h-[32px] " alt="logo" />
               </Link>}
               <div className="grow">
-              {map && <TopNav rootpath={rootpath} map={map} />}
-              </div>
+                {map && <TopNav rootpath={rootpath} map={map} />}
               </div>
             </div>
-          
-            <div className="container">
+          </div>
+
+          <div className="container">
             {/* Main content */}
 
             {children}
           </div>
-          
-  
-          </div>
-{/* 
+
+
+        </div>
+        {/* 
           <div className="sticky top-0 h-screen w-[64px] bg-slate-400">
            
               Right
             </div> */}
-        </div>
-     
+      </div>
+
 
     </KoksmatContext.Provider>
   )

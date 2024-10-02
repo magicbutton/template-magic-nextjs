@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { jsonInputForTargetLanguage } from "quicktype-core";
-import { buildInterface } from "../lib/buildInterface";
+import { buildInterface } from "@/lib/buildInterface";
 
 export default function InterfaceBuilder(props: {
   schema: string;

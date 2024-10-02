@@ -211,16 +211,16 @@ function TableV1Internal(props: { onShowDetails(data: DataRow): void }) {
 
   const sortedData = sortColumn
     ? filteredData.sort((a, b) => {
-        const valueA = a[sortColumn];
-        const valueB = b[sortColumn];
-        if (valueA < valueB) {
-          return sortOrder === "asc" ? -1 : 1;
-        }
-        if (valueA > valueB) {
-          return sortOrder === "asc" ? 1 : -1;
-        }
-        return 0;
-      })
+      const valueA = a[sortColumn];
+      const valueB = b[sortColumn];
+      if (valueA < valueB) {
+        return sortOrder === "asc" ? -1 : 1;
+      }
+      if (valueA > valueB) {
+        return sortOrder === "asc" ? 1 : -1;
+      }
+      return 0;
+    })
     : filteredData;
 
   return (

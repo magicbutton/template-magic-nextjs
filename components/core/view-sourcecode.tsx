@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Check } from "lucide-react";
 export default function SourceCode(props: {

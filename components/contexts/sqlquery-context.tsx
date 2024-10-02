@@ -14,7 +14,7 @@ import { Popover } from "@radix-ui/react-popover";
 import { PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
 import { useSQLSelect3 } from "@/app/koksmat/usesqlselect3";
-import { CommandSelectorItem } from "../command-selector";
+import { CommandSelectorItem } from "@/components/core/command-selector";
 
 export interface SqlQueryItemProps {
   name: string;

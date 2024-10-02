@@ -49,9 +49,8 @@ export default function LeftNavigation({
             <Link href={href}>
               <button
                 onClick={onClick}
-                className={`w-full p-2 rounded-lg transition-colors flex items-center hover:text-slate-900 ${
-                  isActive ? "text-blue-700" : "text-slate-500 hover:bg-muted"
-                }`}
+                className={`w-full p-2 rounded-lg transition-colors flex items-center hover:text-slate-900 ${isActive ? "text-blue-700" : "text-slate-500 hover:bg-muted"
+                  }`}
               >
                 <span className="flex-shrink-0">{icon}</span>
                 {!isCollapsed && !isMobile && (
@@ -78,9 +77,8 @@ export default function LeftNavigation({
 
   return (
     <div
-      className={`h-full flex flex-col justify-between py-3 ${
-        isCollapsed ? "items-center" : ""
-      }`}
+      className={`h-full flex flex-col justify-between py-3 ${isCollapsed ? "items-center" : ""
+        }`}
     >
       <div className="space-y-2 w-full">
         {topItems.map((item) => (

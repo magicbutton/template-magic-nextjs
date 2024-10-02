@@ -35,15 +35,15 @@ import { useSQLSelect3 } from "@/app/koksmat/usesqlselect3";
 import { useRouter } from "next/navigation";
 import { APPNAME } from "@/app/global";
 import { ConnectionStatus } from "./connection-status";
-import useKitchens, { Kitchen } from "./hooks/use-kitchens";
+import useKitchens, { Kitchen } from "@/components/hooks/use-kitchens";
 import { CommandSelector } from "./command-selector";
 import GitOrganizations from "./git-organisations";
 import GitRepos from "./git-repos";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import KoksmatInstallGuide from "./koksmat-install-guide";
 import { Terminal } from "./terminal";
-import useWorkspaceConnectionStatus from "./hooks/use-workspace-connectionstatus";
-import { WorkspaceContext } from "./contexts/workspacecontext";
+import useWorkspaceConnectionStatus from "@/components/hooks/use-workspace-connectionstatus";
+import { WorkspaceContext } from "@/components/contexts/workspacecontext";
 import Link from "next/link";
 
 export type ConnectionStatusType = "connected" | "disconnected" | "unknown";
@@ -106,11 +106,11 @@ WHERE U.email = '${magicbox?.user?.email}'`
             debugger;
             router.push(
               "/" +
-                APPNAME +
-                "/workspace/" +
-                workspacekey +
-                "/kitchen/" +
-                command.slug
+              APPNAME +
+              "/workspace/" +
+              workspacekey +
+              "/kitchen/" +
+              command.slug
             );
             //handleWorkspaceClick(command.slug);
           }}

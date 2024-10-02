@@ -1,5 +1,5 @@
-import { DashboardHomepage } from "@/components/dashboard-homepage";
-import LandingPage from "@/components/koksmat-studio-landing";
+import { DashboardHomepage } from "@/components/core/dashboard-homepage";
+import LandingPage from "@/components/core/koksmat-studio-landing";
 
 export default function Page() {
   return (

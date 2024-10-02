@@ -15,8 +15,8 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { useEffect, useState } from "react"
 
 export interface PopUpProps {
-  
-  show:boolean,
+
+  show: boolean,
   title: string
   description: string
   children: React.ReactNode
@@ -35,16 +35,16 @@ export function PopUp(props: PopUpProps) {
         <DialogHeader>
           <DialogTitle>{props.title}</DialogTitle>
           <DialogDescription>
-          {props.description}
+            {props.description}
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 overflow-auto py-4">
-   
-       {props.children}
-     
+
+          {props.children}
+
         </div>
         <DialogFooter>
-          <Button type="button" onClick={()=>props.onClose()}>Close</Button>
+          <Button type="button" onClick={() => props.onClose()}>Close</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

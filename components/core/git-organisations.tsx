@@ -1,6 +1,6 @@
 import React from "react";
 import { CommandSelector, CommandSelectorItem } from "./command-selector";
-import useWorkspaceExec from "./hooks/use-workspace-exec";
+import useWorkspaceExec from "@/components/hooks/use-workspace-exec";
 import ItemsViewer, { Visualisation } from "./items-viewer";
 
 export default function GitOrganizations(props: {

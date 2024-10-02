@@ -6,7 +6,7 @@
 import { Button } from "@/components/ui/button";
 import Debugger from "./debugger";
 import DebuggerSheet from "./DebuggerSheet";
-import DevCurrentPage from "@/components/dev-current-page";
+import DevCurrentPage from "@/components/core/dev-current-page";
 import { GalleryThumbnails, GalleryThumbnailsIcon } from "lucide-react";
 import { APPNAME } from "@/app/global";
 import Link from "next/link";

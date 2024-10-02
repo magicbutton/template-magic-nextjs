@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Databases from "../database-databases";
-import { href } from "../rootlayout";
+import Databases from "@/components/core/database-databases";
+import { href } from "@/components/core/rootlayout";
 
 // Define the interface for the useHook
 export interface UsePathLookupHook {

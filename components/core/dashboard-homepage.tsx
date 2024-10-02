@@ -29,7 +29,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDownIcon } from "./icons/ChevronDownIcon";
+import { ChevronDownIcon } from "@/components/icons/ChevronDownIcon";
 
 export function DashboardHomepage() {
   const [timeRange, setTimeRange] = useState("this_week");
