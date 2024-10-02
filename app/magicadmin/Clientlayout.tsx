@@ -125,6 +125,20 @@ export default function ClientLayout(props: { children: any }) {
       info: "Sign out of your account",
     },
   ];
+  // temporary layout
+  return (
+    <AppProvider>
+      <ErrorBoundary>
+        <Authenticate apiScope={UserProfileAPI}>
+          <BreadcrumbProvider lookupHandlers={[useExampleHook()]}>
+
+            {children}
+
+          </BreadcrumbProvider>
+        </Authenticate>
+      </ErrorBoundary>
+    </AppProvider>
+  );
   return (
     <AppProvider>
       <ErrorBoundary>
